@@ -28,3 +28,11 @@ public class MallardDuck : Duck
         Console.WriteLine("I'm a Mallard Duck!");
     }
 }
+
+public class RedheadDuck : Duck
+{
+    public override void Display()
+    {
+        Console.WriteLine("I'm a Redhead Duck!");
+    }
+}

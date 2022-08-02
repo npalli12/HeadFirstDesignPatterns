@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace HeadFirstDesignPatterns;
@@ -12,6 +13,8 @@ public class Tests
     [Test]
     public void Test1()
     {
+        new MallardDuck().Display();
+        new RedheadDuck().Display();
         Assert.Pass();
     }
 }
