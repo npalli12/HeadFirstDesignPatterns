@@ -7,7 +7,7 @@ public abstract class Duck
 
     public Duck() { }
     
-    public void Quack()
+    public virtual void Quack()
     {
         Console.WriteLine("Quack");
     }
@@ -15,6 +15,11 @@ public abstract class Duck
     public void Swim()
     {
         Console.WriteLine("Swimming...");
+    }
+
+    public void Fly()
+    {
+        Console.WriteLine("I'm Flying!!!");
     }
 
     public abstract void Display();
@@ -34,5 +39,17 @@ public class RedheadDuck : Duck
     public override void Display()
     {
         Console.WriteLine("I'm a Redhead Duck!");
+    }
+}
+
+public class RubberDuck : Duck
+{
+    public override void Quack()
+    {
+        Console.WriteLine("Squeak");
+    }
+    public override void Display()
+    {
+        Console.WriteLine("I'm a Rubber Duck");
     }
 }

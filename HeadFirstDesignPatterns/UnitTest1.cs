@@ -15,6 +15,11 @@ public class Tests
     {
         new MallardDuck().Display();
         new RedheadDuck().Display();
+        var rubberDuck = new RubberDuck();
+        
+        rubberDuck.Display();
+        rubberDuck.Quack();
+        rubberDuck.Fly();
         Assert.Pass();
     }
 }
