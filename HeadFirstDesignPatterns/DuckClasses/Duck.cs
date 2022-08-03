@@ -29,6 +29,16 @@ public abstract class Duck
     {
         _flyBehavior.Fly();
     }
+
+    public void SetFlyBehavior(IFlyable fb)
+    {
+        _flyBehavior = fb;
+    }
+
+    public void SetQuackBehavior(IQuackable qb)
+    {
+        _quackBehavior = qb;
+    }
 }
 
 

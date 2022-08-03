@@ -50,4 +50,18 @@ public class Tests
         
         Assert.Pass();
     }
+
+    [Test]
+    public void MiniDuckSimulator()
+    {
+        var mallardDuck = new MallardDuck();
+        mallardDuck.PerformQuack();
+        mallardDuck.PerformFly();
+
+        var modelDuck = new ModelDuck();
+        modelDuck.PerformQuack();
+        modelDuck.PerformFly();
+        modelDuck.SetFlyBehavior(new FlyRocketPowered());
+        modelDuck.PerformFly();
+    }
 }
