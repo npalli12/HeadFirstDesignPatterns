@@ -4,7 +4,8 @@ namespace HeadFirstDesignPatterns;
 
 public abstract class Duck
 {
-
+    internal IFlyable _flyBehavior;
+    internal IQuackable _quackBehavior;
     public Duck() { }
     
     public virtual void Quack()
@@ -18,26 +19,39 @@ public abstract class Duck
     }
 
     public abstract void Display();
+
+    public void PerformQuack()
+    {
+        _quackBehavior.Quack();
+    }
+
+    public void PerformFly()
+    {
+        _flyBehavior.Fly();
+    }
 }
 
 
-public class MallardDuck : Duck, IFlyable, IQuackable
+public class MallardDuck : Duck
 {
-    public void Fly()
+    public MallardDuck()
     {
-        Console.WriteLine("I'm Flying!!!");
+        _flyBehavior = new FlyWithWings();
+        _quackBehavior = new RegularQuack();
     }
+    
     public override void Display()
     {
         Console.WriteLine("I'm a Mallard Duck!");
     }
 }
 
-public class RedheadDuck : Duck, IFlyable, IQuackable
+public class RedheadDuck : Duck
 {
-    public void Fly()
+    public RedheadDuck()
     {
-        Console.WriteLine("I'm Flying!!!");
+        _flyBehavior = new FlyWithWings();
+        _quackBehavior = new RegularQuack();
     }
     public override void Display()
     {
@@ -47,9 +61,10 @@ public class RedheadDuck : Duck, IFlyable, IQuackable
 
 public class RubberDuck : Duck, IQuackable
 {
-    public override void Quack()
+    public RubberDuck()
     {
-        Console.WriteLine("Squeak");
+        _flyBehavior = new FlyNoWay();
+        _quackBehavior = new Squeak();
     }
     public override void Display()
     {

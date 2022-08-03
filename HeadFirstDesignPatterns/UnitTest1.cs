@@ -11,14 +11,27 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TestMallardDuck()
     {
-        new MallardDuck().Display();
-        new RedheadDuck().Display();
+        var mallardDuck = new MallardDuck();
+        
+        mallardDuck.Display();
+        mallardDuck.PerformQuack();
+        mallardDuck.PerformFly();
+        
+        Assert.Pass();
+    }
+    
+    
+    [Test]
+    public void TestRubberDuck()
+    {
         var rubberDuck = new RubberDuck();
         
         rubberDuck.Display();
-        rubberDuck.Quack();
+        rubberDuck.PerformQuack();
+        rubberDuck.PerformFly();
+        
         Assert.Pass();
     }
 }
