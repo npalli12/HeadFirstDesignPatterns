@@ -18,6 +18,7 @@ public class Tests
         mallardDuck.Display();
         mallardDuck.PerformQuack();
         mallardDuck.PerformFly();
+        mallardDuck.Swim();
         
         Assert.Pass();
     }
@@ -31,6 +32,21 @@ public class Tests
         rubberDuck.Display();
         rubberDuck.PerformQuack();
         rubberDuck.PerformFly();
+        rubberDuck.Swim();
+        
+        Assert.Pass();
+    }
+    
+      
+    [Test]
+    public void TestRedheadDuck()
+    {
+        var redheadDuck = new RedheadDuck();
+        
+        redheadDuck.Display();
+        redheadDuck.PerformQuack();
+        redheadDuck.PerformFly();
+        redheadDuck.Swim();
         
         Assert.Pass();
     }
