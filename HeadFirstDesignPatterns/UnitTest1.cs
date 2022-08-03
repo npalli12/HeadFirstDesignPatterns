@@ -19,7 +19,6 @@ public class Tests
         
         rubberDuck.Display();
         rubberDuck.Quack();
-        rubberDuck.Fly();
         Assert.Pass();
     }
 }

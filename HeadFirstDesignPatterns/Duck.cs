@@ -17,32 +17,35 @@ public abstract class Duck
         Console.WriteLine("Swimming...");
     }
 
-    public void Fly()
-    {
-        Console.WriteLine("I'm Flying!!!");
-    }
-
     public abstract void Display();
 }
 
 
-public class MallardDuck : Duck
+public class MallardDuck : Duck, IFlyable, IQuackable
 {
+    public void Fly()
+    {
+        Console.WriteLine("I'm Flying!!!");
+    }
     public override void Display()
     {
         Console.WriteLine("I'm a Mallard Duck!");
     }
 }
 
-public class RedheadDuck : Duck
+public class RedheadDuck : Duck, IFlyable, IQuackable
 {
+    public void Fly()
+    {
+        Console.WriteLine("I'm Flying!!!");
+    }
     public override void Display()
     {
         Console.WriteLine("I'm a Redhead Duck!");
     }
 }
 
-public class RubberDuck : Duck
+public class RubberDuck : Duck, IQuackable
 {
     public override void Quack()
     {
