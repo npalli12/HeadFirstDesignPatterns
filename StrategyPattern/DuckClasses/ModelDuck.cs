@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeadFirstDesignPatterns;
+namespace StrategyPattern.DuckClasses;
 
 public class ModelDuck : Duck
 {

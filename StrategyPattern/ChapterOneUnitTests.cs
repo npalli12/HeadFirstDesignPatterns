@@ -1,7 +1,7 @@
-using System;
 using NUnit.Framework;
+using StrategyPattern.DuckClasses;
 
-namespace HeadFirstDesignPatterns;
+namespace StrategyPattern;
 
 public class Tests
 {
@@ -55,10 +55,12 @@ public class Tests
     public void MiniDuckSimulator()
     {
         var mallardDuck = new MallardDuck();
+        mallardDuck.Display();
         mallardDuck.PerformQuack();
         mallardDuck.PerformFly();
 
         var modelDuck = new ModelDuck();
+        modelDuck.Display();
         modelDuck.PerformQuack();
         modelDuck.PerformFly();
         modelDuck.SetFlyBehavior(new FlyRocketPowered());

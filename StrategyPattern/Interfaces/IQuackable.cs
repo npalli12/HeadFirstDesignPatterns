@@ -1,4 +1,4 @@
-﻿namespace HeadFirstDesignPatterns;
+﻿namespace StrategyPattern;
 
 public interface IQuackable
 {

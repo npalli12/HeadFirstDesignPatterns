@@ -8,7 +8,7 @@ King--is-a-->Character
 Troll--is-a-->Character
 Knight--is-a-->Character
 KnifeBehavior--imlements-->WeaponBehavior
-BowAndArrorBehavior--imlements-->WeaponBehavior
+BowAndArrowBehavior--imlements-->WeaponBehavior
 AxeBehavior--imlements-->WeaponBehavior
 SwordBehavior--imlements-->WeaponBehavior
 Character-->setWeapon

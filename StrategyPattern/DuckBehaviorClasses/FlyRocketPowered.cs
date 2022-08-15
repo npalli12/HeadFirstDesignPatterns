@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeadFirstDesignPatterns;
+namespace StrategyPattern;
 
 public class FlyRocketPowered : IFlyable
 {

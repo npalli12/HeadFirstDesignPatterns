@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace HeadFirstDesignPatterns;
+namespace StrategyPattern;
 
-public class RedheadDuck : Duck
+public class MallardDuck : Duck
 {
-    public RedheadDuck()
+    public MallardDuck()
     {
         _flyBehavior = new FlyWithWings();
         _quackBehavior = new RegularQuack();
     }
+    
     public override void Display()
     {
-        Console.WriteLine("I'm a Redhead Duck!");
+        Console.WriteLine("I'm a Mallard Duck!");
     }
 }
-

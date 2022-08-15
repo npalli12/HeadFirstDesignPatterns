@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeadFirstDesignPatterns;
+namespace StrategyPattern;
 
 public class RubberDuck : Duck, IQuackable
 {
