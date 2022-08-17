@@ -21,11 +21,9 @@ public class CurrentConditionsDisplay : IObserver, IDisplayElement
         Display();
     }
 
-    public void Display()
+    public string Display()
     {
-        var displayStr = "Current Conditions : " + _temperature
-                                                 + "F degrees and "
-                                                 + _humidity + "% humidity";
-        Console.WriteLine(displayStr);
+        var displayStr = $"Current Conditions : {_temperature}F degrees and {_humidity}% humidity";
+        return displayStr;
     }
 }
