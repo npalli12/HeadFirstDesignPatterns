@@ -7,7 +7,7 @@ public class WeatherData : ISubject
 {
 
     public List<IObserver> Observers;
-    private float _temerature;
+    private float _temperature;
     private float _humidity;
     private float _pressure;
 
@@ -30,9 +30,13 @@ public class WeatherData : ISubject
     {
         foreach (var observer in Observers)
         {
-            observer.Update(_temerature, _humidity, _pressure);
+            observer.Update();
         }
     }
+
+    public float GetTemperature() => _temperature;
+    public float GetHumidity() => _humidity;
+    public float GetPressure() => _pressure;
     
     public void MeasurementsChanged()
     {
@@ -41,7 +45,7 @@ public class WeatherData : ISubject
 
     public void SetMeasurements(float temp, float humidity, float pressure)
     {
-        _temerature = temp;
+        _temperature = temp;
         _humidity = humidity;
         _pressure = pressure;
         MeasurementsChanged();
